@@ -1,0 +1,244 @@
+/**
+ * Bento.UI theme for SpreadJS
+ *  v.0.1.1
+ * Reference - https://thehub.thomsonreuters.com/docs/DOC-832161
+ * Maintained by Chi Gao, Joe Huang, Aaron Mendez, Jaganlal Thoppe
+ */
+/* Ribbon */
+/* Tile */
+/* Ribbon */
+/* Ribbon ALT */
+/* Tile */
+/* Tile ALT */
+/**
+ * SpreadJS Base
+ */
+.bento-spreadjs {
+  position: absolute;
+  top: 140px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #d5d4d9;
+  box-sizing: border-box;
+}
+.bento-spreadjs .wijmo-wijsuperpanel-vbarcontainer,
+.bento-spreadjs .wijmo-wijsuperpanel-hbarcontainer {
+  background: #ffffff;
+}
+.bento-spreadjs .ui-state-default,
+.bento-spreadjs .ui-widget-content .ui-state-default,
+.bento-spreadjs .ui-widget-header .ui-state-default {
+  border: 1px solid #d5d4d9;
+  background: #f4f5f7;
+  font-weight: normal;
+  color: #212121;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.bento-spreadjs .ui-state-hover,
+.bento-spreadjs .ui-widget-content .ui-state-hover,
+.bento-spreadjs .ui-widget-header .ui-state-hover,
+.bento-spreadjs .ui-state-focus,
+.bento-spreadjs .ui-widget-content .ui-state-focus,
+.bento-spreadjs .ui-widget-header .ui-state-focus {
+  -moz-box-shadow: inset 0 1px 0 #ffffff;
+  border: 1px solid #d5d4d9;
+  background: #f4f5f7;
+  font-weight: normal;
+  color: #212121;
+}
+.bento-spreadjs .ui-state-highlight,
+.bento-spreadjs .ui-widget-content .ui-state-highlight,
+.bento-spreadjs .ui-widget-header .ui-state-highlight {
+  border: 1px solid #d5d4d9;
+  background: #f4f5f7;
+  color: #212121;
+}
+.bento-spreadjs .gc-filter-sort {
+  border: none;
+  margin: 0 !important;
+}
+.bento-spreadjs .gc-filter-sort:focus {
+  color: inherit;
+}
+.bento-spreadjs .gc-filter-dialog-style {
+  padding: 5px !important;
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-layout-table-first-column,
+.bento-spreadjs .gc-filter-dialog-style .gc-layout-table-last-column {
+  width: 5px;
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-layout-table-first-column img,
+.bento-spreadjs .gc-filter-dialog-style .gc-layout-table-last-column img {
+  display: none;
+}
+.bento-spreadjs .gc-filter-dialog-style #gc-sortASC:before {
+  content: "↑ ";
+}
+.bento-spreadjs .gc-filter-dialog-style #gc-sortDES:before {
+  content: "↓ ";
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-filter-check-outerDiv .gc-check-image {
+  display: none;
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-filter-check-outerDiv .gc-uncheck-image {
+  display: none;
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-filter-check-outerDiv a.gc-filter-check {
+  margin: 0 !important;
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-filter-check-outerDiv a.gc-filter-check:first-child {
+  padding: 0 13px 0 0 !important;
+  position: relative;
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-filter-check-outerDiv a.gc-filter-check:first-child:after {
+  content: '|';
+  color: #b2b2b8;
+  position: absolute;
+  right: 0;
+  top: -1px;
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-filter-check-outerDiv a.gc-filter-check:last-child {
+  padding: 0 0 0 9px !important;
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-search-outer-div {
+  border: none;
+  background: transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border-top: 1px solid #b2b2b8;
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-search-outer-div #gc-filterSearch {
+  border: 1px solid #b2b2b8;
+  padding: 0 5px;
+  margin: 7px 0 5px;
+  width: 100%;
+  line-height: 20px;
+  height: 22px !important;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  display: block;
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-search-outer-div .gc-filter-check-outerDiv {
+  margin: 0 0 5px;
+}
+.bento-spreadjs .gc-filter-dialog-style .gc-search-outer-div .gc-filter-check-outerDiv a:last-child {
+  margin: 0 !important;
+}
+.bento-spreadjs .gc-layout-table > tr:last-child td:nth-child(2) {
+  border-top: 1px solid #b2b2b8 !important;
+}
+.bento-spreadjs .gc-filter-item-container {
+  margin: 0 0 5px;
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.bento-spreadjs .gc-filter-item-container .gc-filter-item {
+  border: none !important;
+  line-height: 20px;
+  font-size: 14px;
+}
+.bento-spreadjs .gc-filter-item-container .gc-filter-item .gc-filter-item-input,
+.bento-spreadjs .gc-filter-item-container .gc-filter-item .gc-filter-item-text {
+  float: none;
+  display: inline;
+}
+.bento-spreadjs a.gc-filter-check-style {
+  color: #37383d;
+}
+.bento-spreadjs a.gc-filter-check-style:hover {
+  color: #37383d;
+}
+.bento-spreadjs .btn {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.bento-spreadjs .btn.gc-filter-button {
+  height: 30px;
+  line-height: 32px;
+  width: calc(50% - 4.5px);
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  display: block;
+}
+.bento-spreadjs .btn#gc-filterOK {
+  color: #ffffff;
+  background: #606169;
+  border-color: transparent;
+  float: left;
+  margin: 10px 0 5px;
+}
+.bento-spreadjs .btn#gc-filterOK:hover {
+  background: #37383d;
+}
+.bento-spreadjs .btn#gc-filterCancel {
+  float: right;
+  margin: 10px 0 5px;
+}
+.wijmoThemeHelper.ui-state-default,
+.wijmoThemeHelper.ui-widget-content .ui-state-default,
+.wijmoThemeHelper.ui-widget-header .ui-state-default {
+  border: 1px solid #d5d4d9;
+  background: #f4f5f7;
+  font-weight: normal;
+  color: #212121;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.wijmoThemeHelper.ui-state-hover,
+.wijmoThemeHelper.ui-widget-content .ui-state-hover,
+.wijmoThemeHelper.ui-widget-header .ui-state-hover,
+.wijmoThemeHelper.ui-state-focus,
+.wijmoThemeHelper.ui-widget-content .ui-state-focus,
+.wijmoThemeHelper.ui-widget-header .ui-state-focus {
+  -moz-box-shadow: inset 0 1px 0 #ffffff;
+  border: 1px solid #d5d4d9;
+  background: #f4f5f7;
+  font-weight: normal;
+  color: #212121;
+}
+.wijmoThemeHelper.ui-state-highlight,
+.wijmoThemeHelper.ui-widget-content .ui-state-highlight,
+.wijmoThemeHelper.ui-widget-header .ui-state-highlight {
+  border: 1px solid #d5d4d9;
+  background: #f4f5f7;
+  color: #212121;
+}
+/**
+ * SpreadJS Formula Bar
+ */
+.bento-spreadjs-formulabar {
+  width: 100%;
+  border-right: 1px solid #b2b2b8;
+}
+.bento-spreadjs-formulabar td:first-child {
+  width: 100px;
+}
+.bento-spreadjs-formulabar td:first-child .bento-spreadjs-positionbox {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-top: none;
+  border-bottom: none;
+  text-align: center;
+}
+.bento-spreadjs-formulabar .bento-spreadjs-formulabox {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 100%;
+  border: none;
+  padding-left: 10px;
+  height: 30px;
+}

@@ -1,0 +1,1719 @@
+/**
+ * Bento.UI theme for Wijmo FlexGrid
+ *  v.0.1.0
+ * Maintained by Chi Gao, Joe Huang, Aaron Mendez, Jaganlal Thoppe
+ */
+/* Ribbon */
+/* Tile */
+/* Ribbon */
+/* Ribbon ALT */
+/* Tile */
+/* Tile ALT */
+/**
+ * FlexGrid Base
+ */
+/*-------------------------------------------------------------------------*/
+/* create a 'custom-flex-grid' theme for the FlexGrid */
+/* assuming row height is 48px for mobile, and 30px for desktop */
+/* row header is 44px for both */
+/*
+     Force Desktop
+     default mode: 32px
+     compact 24px
+
+     Default
+     default mode: 44px
+     compact 38px
+      */
+#wj-wm {
+  display: none;
+}
+.wj-flexgrid .wj-cell .wj-btn.wj-btn-glyph.wj-right {
+  height: auto;
+  top: auto;
+  bottom: auto;
+  right: 10px;
+}
+.wj-control .wj-btn.wj-elem-filter {
+  width: 25px;
+  height: 25px;
+  margin: -2px 0 0 0;
+  border: 1px solid #d5d4d9;
+  opacity: 1 !important;
+  background: #ffffff;
+  border-radius: 4px;
+  float: right;
+  cursor: pointer;
+  text-align: left !important;
+}
+.wj-control .wj-btn.wj-elem-filter .wj-glyph-filter:after {
+  position: relative;
+  display: inline-block;
+  top: 3px;
+  left: 0;
+  speak: none;
+  font-size: 17px;
+  height: 14px;
+  width: 0.11em;
+  content: "\e630";
+  border: none;
+}
+.wj-control .wj-btn.wj-elem-filter .wj-glyph-filter {
+  top: 0;
+  left: 0;
+  position: relative;
+  border: none;
+  font-family: bento-icomoon;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+}
+.multi-select[class*=" wj-sort-"],
+.wj-glyph-down,
+.wj-glyph-up {
+  line-height: 1;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  opacity: 1;
+  font-family: "bento-icomoon";
+}
+.wj-control .wj-header.wj-filter-on .wj-btn.wj-elem-filter .wj-glyph-filter:after {
+  left: 1px;
+  font-size: 14px;
+  content: "\e67c";
+}
+.wj-header[class*="wj-filter-"] {
+  text-align: left !important;
+}
+.wj-header[class*="wj-filter-"][class*="wj-sort-"] .wj-glyph-filter:after {
+  font-size: 14px;
+}
+.wj-control .wj-header[class*="wj-filter-"].wj-sort-asc .wj-btn.wj-elem-filter .wj-glyph-filter:after {
+  top: 4px;
+  left: 2px;
+  content: "\e6e2";
+}
+.wj-control .wj-header[class*="wj-filter-"].wj-sort-desc .wj-btn.wj-elem-filter .wj-glyph-filter:after {
+  top: 4px;
+  left: 2px;
+  content: "\e6e1";
+}
+.wj-control .wj-header.wj-filter-on.wj-sort-asc .wj-btn.wj-elem-filter .wj-glyph-filter:after {
+  top: 2px;
+  content: "\e67b";
+}
+.wj-control .wj-header.wj-filter-on.wj-sort-desc .wj-btn.wj-elem-filter .wj-glyph-filter:after {
+  top: 2px;
+  content: "\e67e";
+}
+.wj-header[class*="wj-filter-"] .wj-glyph-down,
+.wj-header[class*="wj-filter-"] .wj-glyph-up {
+  display: none;
+}
+.wj-listbox-item:not(.wj-state-selected):not(.wj-separator):hover {
+  background-color: #d4ebf4;
+}
+.wj-input-group-btn {
+  width: 44px;
+}
+.wj-input-group-btn > .wj-btn {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wj-control.wj-columnfiltereditor {
+  border-radius: 0;
+  padding: 0;
+}
+.wj-control.wj-columnfiltereditor .filter.wj-control {
+  margin: 0;
+}
+.wj-control.wj-columnfiltereditor .filter-container {
+  padding: 5px 10px;
+}
+.wj-control.wj-columnfiltereditor .wj-listbox {
+  border-radius: 0;
+  border: none;
+}
+.wj-control.wj-columnfiltereditor .wj-input-group-btn:last-child > .wj-btn {
+  border-left: none;
+}
+.wj-control.wj-columnfiltereditor .wj-state-selected {
+  background: #d4ebf4;
+}
+.wj-control.wj-columnfiltereditor hr {
+  margin: 0;
+}
+.wj-control.wj-columnfiltereditor .btn-close {
+  font-size: 20px;
+  line-height: 20px;
+  padding: 4px 10px;
+  background: white;
+  border-radius: 0;
+}
+.wj-control.wj-columnfiltereditor .btn-close:hover {
+  color: #ffffff;
+  background: #37383d;
+}
+.wj-control.wj-columnfiltereditor > div > div:nth-child(5) {
+  display: flex;
+  padding: 0 10px;
+}
+.wj-control.wj-columnfiltereditor button[wj-part^="btn-"].btn-cf {
+  margin: 0;
+  background: white;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  width: 50%;
+  text-align: left;
+}
+.wj-control.wj-columnfiltereditor button[wj-part^="btn-dsc"].btn-cf {
+  text-align: right;
+}
+.wj-control.wj-columnfiltereditor button[wj-part^="btn-"].btn-cf:hover {
+  background: #37383d;
+  color: #ffffff;
+}
+.wj-control.wj-columnfiltereditor label span {
+  padding-left: 3px;
+  font-weight: normal;
+}
+.wj-control.wj-columnfiltereditor .btn-forms {
+  padding: 10px;
+}
+.wj-control.wj-columnfiltereditor button[wj-part="btn-apply"],
+.wj-control.wj-columnfiltereditor button[wj-part="btn-clear"],
+.wj-control.wj-columnfiltereditor button[wj-part="btn-cancel"] {
+  flex: 1;
+  line-height: 30px;
+  margin: 0 0 10px 0;
+  border: 1px solid;
+  border-radius: 5px;
+  height: 30px;
+  padding: 0 10px;
+  min-width: 100px;
+  width: calc(50% - 15px);
+  text-align: center;
+  color: #37383d;
+  background-color: #f4f5f7;
+  border: 1px solid #b2b2b8;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.15s;
+  -o-transition: background-color 0.15s;
+  transition: background-color 0.15s;
+}
+.wj-control.wj-columnfiltereditor button[wj-part="btn-apply"]:hover,
+.wj-control.wj-columnfiltereditor button[wj-part="btn-clear"]:hover,
+.wj-control.wj-columnfiltereditor button[wj-part="btn-cancel"]:hover {
+  color: #212121;
+  background-color: #ffffff;
+  border: 1px solid #b2b2b8;
+}
+.wj-control.wj-columnfiltereditor button[wj-part="btn-apply"] {
+  color: #ffffff;
+  background-color: #606169;
+  border: 0;
+}
+.wj-control.wj-columnfiltereditor button[wj-part="btn-apply"]:hover {
+  color: #ffffff;
+  background-color: #37383d;
+  border: 0;
+}
+.wj-control.wj-columnfiltereditor a[wj-part="a-val"],
+.wj-control.wj-columnfiltereditor a[wj-part="a-cnd"] {
+  font-size: 11px;
+  width: calc(50% - 5px);
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  font-weight: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.wj-control.wj-columnfiltereditor a[wj-part="a-val"].wj-state-disabled,
+.wj-control.wj-columnfiltereditor a[wj-part="a-cnd"].wj-state-disabled {
+  padding-bottom: 6px;
+  font-weight: bold;
+  border-bottom: 4px solid #ff8000;
+}
+.wj-control.wj-columnfiltereditor a[wj-part="a-cnd"] {
+  float: left;
+}
+.wj-control.wj-columnfiltereditor a[wj-part="a-val"] {
+  float: right;
+}
+.wj-control.wj-columnfiltereditor [wj-part="div-edt-cnd"] {
+  padding: 10px 10px 0;
+  border-bottom: 1px solid #d5d4d9;
+}
+.wj-control.wj-columnfiltereditor [wj-part="div-edt-cnd"] .wj-control.wj-dropdown.wj-content {
+  width: 100%;
+}
+.wj-control.wj-columnfiltereditor [wj-part="div-edt-val"] {
+  padding: 10px 0 0 10px;
+  border-bottom: 1px solid #d5d4d9;
+}
+.wj-control.wj-columnfiltereditor [wj-part="div-edt-val"] > div > label {
+  width: calc(100% + 10px);
+  margin: 0 -10px !important;
+  padding: 10px 10px 10px 20px !important;
+  border-bottom: 1px solid #d5d4d9;
+  border-top: 1px solid #d5d4d9;
+}
+.wj-control.wj-columnfiltereditor [wj-part="div-edt-val"] [wj-part="div-filter"] + .wj-listbox-item {
+  padding: 5px 6px;
+}
+.wj-control.wj-columnfiltereditor .wj-control.wj-dropdown.wj-content {
+  width: calc(100% - 10px);
+  margin-bottom: 10px;
+}
+.wj-control.wj-columnfiltereditor .wj-dropdown.wj-control.wj-listbox.wj-content {
+  max-height: 250px !important;
+  width: 100%;
+  margin-bottom: 0;
+}
+.wj-control.wj-columnfiltereditor [wj-part="div-sort"] {
+  font-size: 0;
+  border-bottom: 1px solid #d5d4d9;
+  padding: 8px;
+  height: 53px;
+  text-align: center;
+}
+.wj-control.wj-columnfiltereditor .wj-filtertype {
+  margin: 0 !important;
+  padding: 0;
+  font-size: 0;
+  line-height: 16px;
+  padding: 10px;
+  height: 37px;
+  border-bottom: 1px solid #d5d4d9;
+  background-color: #ffffff;
+}
+.wj-control.wj-columnfiltereditor a[wj-part="a-cnd"],
+.wj-control.wj-columnfiltereditor a[wj-part="a-val"] {
+  color: #4C4C4C;
+}
+.wj-control.wj-columnfiltereditor button[wj-part="btn-asc"],
+.wj-control.wj-columnfiltereditor button[wj-part="btn-dsc"] {
+  margin: 0;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 10px;
+  min-width: 100px !important;
+  width: calc(50% - 5px);
+  color: #37383d;
+  background-color: #f4f5f7;
+  border: 1px solid #b2b2b8;
+  border-radius: 5px;
+  float: left;
+}
+.wj-control.wj-columnfiltereditor button[wj-part="btn-asc"]:hover,
+.wj-control.wj-columnfiltereditor button[wj-part="btn-dsc"]:hover {
+  color: #212121;
+  background-color: #ffffff;
+  border: 1px solid #b2b2b8;
+}
+.wj-control.wj-columnfiltereditor button[wj-part="btn-dsc"] {
+  float: right;
+}
+.wj-dropdown-panel {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  color: #212121;
+}
+.wj-dropdown-panel .wj-state-selected {
+  background: #d4ebf4;
+  color: #212121;
+}
+.bento-flex-grid .bento-flex-grid-sticky-toolbar .wj-grouppanel {
+  border: none;
+  border-bottom: 1px solid #d5d4d9;
+}
+.bento-flex-grid .bento-flex-grid-sticky-toolbar .bento-toolbar {
+  border: none;
+  border-bottom: 1px solid #d5d4d9;
+}
+.bento-flex-grid .wj-grouppanel,
+.wj-grouppanel {
+  padding: 0 0 0 10px;
+  height: auto;
+  line-height: 60px;
+  background-color: #ffffff;
+  border-left: 1px solid #d5d4d9;
+  border-right: 1px solid #d5d4d9;
+}
+.bento-flex-grid .wj-grouppanel .wj-cell:hover,
+.wj-grouppanel .wj-cell:hover {
+  background: #ffffff;
+  color: #212121;
+}
+.bento-flex-grid .wj-grouppanel .wj-cell:hover [wj-remove],
+.wj-grouppanel .wj-cell:hover [wj-remove] {
+  color: #212121;
+}
+.bento-flex-grid .wj-grouppanel .wj-header.wj-cell.wj-groupmarker,
+.wj-grouppanel .wj-header.wj-cell.wj-groupmarker {
+  background: #f4f5f7;
+  border-radius: 20px;
+  border: 1px solid #b2b2b8;
+  color: #37383d;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: capitalize;
+  margin-top: 12px;
+  padding: 0 30px 0 12px;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -ms-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
+  position: relative !important;
+  display: inline-block !important;
+}
+.bento-flex-grid .wj-grouppanel .wj-header.wj-cell.wj-groupmarker > span.wj-glyph-down,
+.wj-grouppanel .wj-header.wj-cell.wj-groupmarker > span.wj-glyph-down,
+.bento-flex-grid .wj-grouppanel .wj-header.wj-cell.wj-groupmarker > span.wj-glyph-up,
+.wj-grouppanel .wj-header.wj-cell.wj-groupmarker > span.wj-glyph-up {
+  margin-left: 0;
+}
+.bento-flex-grid .wj-grouppanel .wj-header.wj-cell.wj-groupmarker [wj-remove],
+.wj-grouppanel .wj-header.wj-cell.wj-groupmarker [wj-remove],
+.bento-flex-grid .wj-grouppanel .wj-header.wj-cell.wj-groupmarker .wj-remove,
+.wj-grouppanel .wj-header.wj-cell.wj-groupmarker .wj-remove {
+  background-image: none;
+  color: #37383d;
+  font-family: 'bento-icomoon';
+  font-size: 0;
+  font-weight: 400;
+  text-align: left;
+  text-shadow: none;
+  padding: 0 !important;
+  padding-right: 0 !important;
+  position: absolute !important;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  line-height: 30px;
+  width: 22px;
+}
+.bento-flex-grid .wj-grouppanel .wj-header.wj-cell.wj-groupmarker [wj-remove]:after,
+.wj-grouppanel .wj-header.wj-cell.wj-groupmarker [wj-remove]:after,
+.bento-flex-grid .wj-grouppanel .wj-header.wj-cell.wj-groupmarker .wj-remove:after,
+.wj-grouppanel .wj-header.wj-cell.wj-groupmarker .wj-remove:after {
+  font-size: 14px;
+  content: "\e649";
+}
+.wj-topleft .wj-cell.wj-header,
+.wj-rowheaders .wj-cell.wj-header {
+  border-right: 1px solid #d5d4d9;
+}
+.bento-flex-grid,
+.bento-flex-grid.wj-content {
+  border-radius: 0;
+  outline: none;
+  margin-top: -1px;
+  border: 1px solid #d5d4d9;
+}
+.bento-flex-grid div[wj-part="sz"],
+.bento-flex-grid.wj-content div[wj-part="sz"] {
+  background-color: #dc0a0a;
+}
+.bento-flex-grid .wj-cell .wj-elem-dropdown,
+.bento-flex-grid.wj-content .wj-cell .wj-elem-dropdown {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 10px;
+  padding-right: 11.5px;
+}
+.bento-flex-grid .wj-cell .wj-elem-dropdown .wj-glyph-down:after,
+.bento-flex-grid.wj-content .wj-cell .wj-elem-dropdown .wj-glyph-down:after {
+  font-size: 21px;
+  content: '\e630';
+}
+.bento-flex-grid .select,
+.bento-flex-grid.wj-content .select {
+  background-color: #ff8000;
+  color: white !important;
+}
+.bento-flex-grid .wj-state-sticky .wj-header,
+.bento-flex-grid.wj-content .wj-state-sticky .wj-header {
+  opacity: 1;
+}
+.bento-flex-grid div[wj-part="ch"],
+.bento-flex-grid.wj-content div[wj-part="ch"] {
+  background-color: #f4f5f7;
+  border-bottom: 1px solid #d5d4d9;
+}
+.bento-flex-grid .wj-glyph-filter,
+.bento-flex-grid.wj-content .wj-glyph-filter {
+  font-size: 1.1em;
+}
+.bento-flex-grid .wj-header.wj-cell,
+.bento-flex-grid.wj-content .wj-header.wj-cell {
+  background-color: #ffffff;
+  color: #212121;
+  font-size: 0.85em;
+  line-height: 1.7em;
+  padding: 13px 11px;
+  text-transform: capitalize;
+}
+.bento-flex-grid .wj-header.wj-cell.wj-filter-on,
+.bento-flex-grid.wj-content .wj-header.wj-cell.wj-filter-on,
+.bento-flex-grid .wj-header.wj-cell.wj-filter-off,
+.bento-flex-grid.wj-content .wj-header.wj-cell.wj-filter-off {
+  padding: 13px 11px;
+}
+.bento-flex-grid .wj-header.wj-cell input:not([type='checkbox']),
+.bento-flex-grid.wj-content .wj-header.wj-cell input:not([type='checkbox']) {
+  color: #37383d;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 0;
+  font-weight: 400;
+  background-color: #ffffff;
+  border: 1px solid #b2b2b8;
+  display: inline-block;
+  padding: 0 6px;
+  vertical-align: middle;
+  border-radius: 0;
+  position: relative;
+}
+.bento-flex-grid .wj-header.wj-cell .bento-datepicker,
+.bento-flex-grid.wj-content .wj-header.wj-cell .bento-datepicker,
+.bento-flex-grid .wj-header.wj-cell .bento-select,
+.bento-flex-grid.wj-content .wj-header.wj-cell .bento-select {
+  z-index: 0;
+}
+.bento-flex-grid .wj-header.wj-cell .bento-datepicker input,
+.bento-flex-grid.wj-content .wj-header.wj-cell .bento-datepicker input {
+  width: calc(100% - 30px);
+}
+.bento-flex-grid .wj-header.wj-cell .bento-datepicker .input-group-btn .btn,
+.bento-flex-grid.wj-content .wj-header.wj-cell .bento-datepicker .input-group-btn .btn {
+  height: 100%;
+  line-height: 1;
+  width: 30px;
+  font-size: 20px;
+}
+.bento-flex-grid .wj-header.wj-cell .bento-combobox.bento-select div.input-label,
+.bento-flex-grid.wj-content .wj-header.wj-cell .bento-combobox.bento-select div.input-label,
+.bento-flex-grid .wj-header.wj-cell .bento-combobox.bento-select div.placeholder .bento-select,
+.bento-flex-grid.wj-content .wj-header.wj-cell .bento-combobox.bento-select div.placeholder .bento-select,
+.bento-flex-grid .wj-header.wj-cell .form-control,
+.bento-flex-grid.wj-content .wj-header.wj-cell .form-control {
+  height: 100%;
+  line-height: 1em;
+  font-weight: normal;
+  position: relative;
+  padding-right: 30px;
+}
+.bento-flex-grid .wj-header.wj-cell [bento-combobox],
+.bento-flex-grid.wj-content .wj-header.wj-cell [bento-combobox],
+.bento-flex-grid .wj-header.wj-cell .bento-select,
+.bento-flex-grid.wj-content .wj-header.wj-cell .bento-select {
+  position: relative;
+  height: 30px;
+}
+.bento-flex-grid .wj-header.wj-cell [bento-combobox] > .btn,
+.bento-flex-grid.wj-content .wj-header.wj-cell [bento-combobox] > .btn,
+.bento-flex-grid .wj-header.wj-cell .bento-select > .btn,
+.bento-flex-grid.wj-content .wj-header.wj-cell .bento-select > .btn {
+  height: 100%;
+  width: 30px;
+  float: right;
+  height: 30px;
+}
+.bento-flex-grid .wj-header.wj-cell .bento-select > .btn [class^=bento-icon],
+.bento-flex-grid.wj-content .wj-header.wj-cell .bento-select > .btn [class^=bento-icon] {
+  top: 0;
+}
+.bento-flex-grid .wj-header.wj-cell .wj-input input,
+.bento-flex-grid.wj-content .wj-header.wj-cell .wj-input input {
+  border: none;
+}
+.bento-flex-grid .wj-header.wj-cell .wj-dropdown,
+.bento-flex-grid.wj-content .wj-header.wj-cell .wj-dropdown {
+  height: 30px;
+}
+.bento-flex-grid .wj-header.wj-cell .wj-glyph-filter,
+.bento-flex-grid.wj-content .wj-header.wj-cell .wj-glyph-filter {
+  color: #212121;
+  opacity: 1;
+}
+.bento-flex-grid .wj-header.wj-cell.compare-a,
+.bento-flex-grid.wj-content .wj-header.wj-cell.compare-a {
+  text-align: center !important;
+  background-color: #45B7E7;
+  color: #fff;
+}
+.bento-flex-grid .wj-header.wj-cell.compare-b,
+.bento-flex-grid.wj-content .wj-header.wj-cell.compare-b {
+  text-align: center !important;
+  background-color: #1472c2;
+  color: #fff;
+}
+.bento-flex-grid .wj-header.wj-cell.compare-c,
+.bento-flex-grid.wj-content .wj-header.wj-cell.compare-c {
+  text-align: center !important;
+  background-color: #28447e;
+  color: #fff;
+}
+.bento-flex-grid .wj-cell,
+.bento-flex-grid.wj-content .wj-cell,
+.bento-flex-grid .table-cell,
+.bento-flex-grid.wj-content .table-cell {
+  border-bottom: 1px solid #d5d4d9;
+  border-left: 1px solid #d5d4d9;
+  border-right: 0;
+  background-color: #ffffff;
+  color: #212121;
+  padding: 11px;
+}
+.bento-flex-grid .wj-cell .wj-grid-editor,
+.bento-flex-grid.wj-content .wj-cell .wj-grid-editor,
+.bento-flex-grid .table-cell .wj-grid-editor,
+.bento-flex-grid.wj-content .table-cell .wj-grid-editor {
+  padding: 0;
+}
+.bento-flex-grid .wj-cell > span.wj-glyph-down,
+.bento-flex-grid.wj-content .wj-cell > span.wj-glyph-down,
+.bento-flex-grid .table-cell > span.wj-glyph-down,
+.bento-flex-grid.wj-content .table-cell > span.wj-glyph-down,
+.bento-flex-grid .wj-cell > span.wj-glyph-up,
+.bento-flex-grid.wj-content .wj-cell > span.wj-glyph-up,
+.bento-flex-grid .table-cell > span.wj-glyph-up,
+.bento-flex-grid.wj-content .table-cell > span.wj-glyph-up {
+  margin-left: 0.25em;
+}
+.bento-flex-grid .wj-cell .bento-combobox.bento-select div.input-label,
+.bento-flex-grid.wj-content .wj-cell .bento-combobox.bento-select div.input-label,
+.bento-flex-grid .table-cell .bento-combobox.bento-select div.input-label,
+.bento-flex-grid.wj-content .table-cell .bento-combobox.bento-select div.input-label,
+.bento-flex-grid .wj-cell .bento-combobox.bento-select div.placeholder,
+.bento-flex-grid.wj-content .wj-cell .bento-combobox.bento-select div.placeholder,
+.bento-flex-grid .table-cell .bento-combobox.bento-select div.placeholder,
+.bento-flex-grid.wj-content .table-cell .bento-combobox.bento-select div.placeholder,
+.bento-flex-grid .wj-cell .bento-combobox.bento-select input[type=text],
+.bento-flex-grid.wj-content .wj-cell .bento-combobox.bento-select input[type=text],
+.bento-flex-grid .table-cell .bento-combobox.bento-select input[type=text],
+.bento-flex-grid.wj-content .table-cell .bento-combobox.bento-select input[type=text],
+.bento-flex-grid .wj-cell [bento-combobox],
+.bento-flex-grid.wj-content .wj-cell [bento-combobox],
+.bento-flex-grid .table-cell [bento-combobox],
+.bento-flex-grid.wj-content .table-cell [bento-combobox],
+.bento-flex-grid .wj-cell .form-control,
+.bento-flex-grid.wj-content .wj-cell .form-control,
+.bento-flex-grid .table-cell .form-control,
+.bento-flex-grid.wj-content .table-cell .form-control {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bento-flex-grid .wj-cell:focus,
+.bento-flex-grid.wj-content .wj-cell:focus,
+.bento-flex-grid .table-cell:focus,
+.bento-flex-grid.wj-content .table-cell:focus {
+  outline: none;
+}
+.bento-flex-grid .wj-cell i,
+.bento-flex-grid.wj-content .wj-cell i {
+  color: #212121;
+}
+.bento-flex-grid .wj-cell[style*="left: 0"],
+.bento-flex-grid.wj-content .wj-cell[style*="left: 0"] {
+  border-left: 0;
+}
+.bento-flex-grid .wj-state-selected,
+.bento-flex-grid.wj-content .wj-state-selected {
+  background: #f4f5f7;
+  color: #212121;
+}
+.bento-flex-grid .wj-state-multi-selected,
+.bento-flex-grid.wj-content .wj-state-multi-selected {
+  background: #d4ebf4;
+  color: #212121;
+}
+.bento-flex-grid .bento-cell-selected,
+.bento-flex-grid.wj-content .bento-cell-selected {
+  background: #f4f5f7 !important;
+  color: #212121;
+}
+.bento-flex-grid .wj-grid-editor,
+.bento-flex-grid.wj-content .wj-grid-editor {
+  padding: 10px;
+  padding-left: 18.75%;
+}
+.bento-flex-grid.wj-flexgrid .wj-frozen-row,
+.bento-flex-grid.wj-content.wj-flexgrid .wj-frozen-row {
+  border-bottom: 4px solid #d5d4d9;
+}
+.bento-flex-grid .wj-header.wj-cell.hidden,
+.bento-flex-grid.wj-content .wj-header.wj-cell.hidden {
+  display: none;
+}
+.bento-flex-grid .wj-header.wj-cell.bento-input-cell,
+.bento-flex-grid.wj-content .wj-header.wj-cell.bento-input-cell {
+  padding: 8px;
+}
+.bento-flex-grid .wj-header.wj-cell.bento-input-cell .wj-content,
+.bento-flex-grid.wj-content .wj-header.wj-cell.bento-input-cell .wj-content {
+  border-radius: 0;
+}
+.bento-flex-grid .wj-header.wj-cell.bento-input-cell > .wj-glyph-down,
+.bento-flex-grid.wj-content .wj-header.wj-cell.bento-input-cell > .wj-glyph-down,
+.bento-flex-grid .wj-header.wj-cell.bento-input-cell > .wj-glyph-up,
+.bento-flex-grid.wj-content .wj-header.wj-cell.bento-input-cell > .wj-glyph-up {
+  right: 2px;
+  position: absolute;
+}
+.bento-flex-grid .wj-cell .wj-glyph-right,
+.bento-flex-grid.wj-content .wj-cell .wj-glyph-right,
+.bento-flex-grid .wj-cell .wj-glyph-down-right,
+.bento-flex-grid.wj-content .wj-cell .wj-glyph-down-right {
+  border: none;
+  font-family: bento-icomoon;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+.bento-flex-grid .wj-cell .wj-glyph-down-right:after,
+.bento-flex-grid.wj-content .wj-cell .wj-glyph-down-right:after {
+  content: "\e651";
+}
+.bento-flex-grid .wj-cell .wj-glyph-right:after,
+.bento-flex-grid.wj-content .wj-cell .wj-glyph-right:after {
+  content: "\e66b";
+}
+.bento-flex-grid .cell-actions,
+.bento-flex-grid.wj-content .cell-actions {
+  padding: 10px 11px;
+}
+.bento-flex-grid .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected):not(.col-select):not(.disabled):not(.is-editable):not(.is-read-only),
+.bento-flex-grid.wj-content .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected):not(.col-select):not(.disabled):not(.is-editable):not(.is-read-only) {
+  background: #ffffff;
+}
+.bento-flex-grid .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected):not(.col-select):not(.disabled):not(.is-editable):not(.is-read-only),
+.bento-flex-grid.wj-content .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected):not(.col-select):not(.disabled):not(.is-editable):not(.is-read-only) {
+  background: #ffffff;
+}
+.bento-flex-grid .wj-group:not(.wj-state-selected):not(.wj-state-multi-selected),
+.bento-flex-grid.wj-content .wj-group:not(.wj-state-selected):not(.wj-state-multi-selected) {
+  background-color: #ffffff;
+}
+.bento-flex-grid .wj-state-selected,
+.bento-flex-grid.wj-content .wj-state-selected {
+  background: #d4ebf4;
+}
+.bento-flex-grid .wj-state-multi-selected,
+.bento-flex-grid.wj-content .wj-state-multi-selected {
+  background: #d4ebf4;
+}
+.bento-flex-grid .wj-topleft .wj-header.wj-cell,
+.bento-flex-grid.wj-content .wj-topleft .wj-header.wj-cell,
+.bento-flex-grid .wj-rowheaders .wj-header.wj-cell,
+.bento-flex-grid.wj-content .wj-rowheaders .wj-header.wj-cell {
+  background: #f4f5f7;
+  border-right: 1px solid #d5d4d9;
+  border-left: 0;
+  text-align: center;
+}
+.bento-flex-grid div[wj-part="ch"],
+.bento-flex-grid.wj-content div[wj-part="ch"],
+.bento-flex-grid .wj-topleft .wj-header.wj-cell,
+.bento-flex-grid.wj-content .wj-topleft .wj-header.wj-cell,
+.bento-flex-grid .wj-colheaders .wj-header.wj-cell,
+.bento-flex-grid.wj-content .wj-colheaders .wj-header.wj-cell {
+  border-bottom: 1px solid #d5d4d9;
+}
+.bento-flex-grid .wj-colheaders .wj-header.wj-cell.wj-state-multi-selected,
+.bento-flex-grid.wj-content .wj-colheaders .wj-header.wj-cell.wj-state-multi-selected {
+  border-bottom: 1px solid #37383d;
+}
+.bento-flex-grid .wj-rowheaders .wj-header.wj-cell.wj-state-multi-selected,
+.bento-flex-grid.wj-content .wj-rowheaders .wj-header.wj-cell.wj-state-multi-selected {
+  border-right: 1px solid #37383d;
+}
+.bento-flex-grid .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected).col-select,
+.bento-flex-grid.wj-content .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected).col-select,
+.bento-flex-grid .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected).col-select,
+.bento-flex-grid.wj-content .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected).col-select,
+.bento-flex-grid .wj-cell.col-select,
+.bento-flex-grid.wj-content .wj-cell.col-select {
+  background: #f4f5f7;
+}
+.bento-flex-grid .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected):not(.wj-state-multi-selected).is-read-only:not(.wj-state-multi-selected).is-editable.disabled,
+.bento-flex-grid.wj-content .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected):not(.wj-state-multi-selected).is-read-only:not(.wj-state-multi-selected).is-editable.disabled,
+.bento-flex-grid .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected):not(.wj-state-multi-selected).is-read-only:not(.wj-state-multi-selected).is-editable.disabled,
+.bento-flex-grid.wj-content .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected):not(.wj-state-multi-selected).is-read-only:not(.wj-state-multi-selected).is-editable.disabled,
+.bento-flex-grid .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected):not(.status-indicator).disabled,
+.bento-flex-grid.wj-content .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected):not(.status-indicator).disabled,
+.bento-flex-grid .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected):not(.status-indicator).disabled,
+.bento-flex-grid.wj-content .wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-selected):not(.wj-state-multi-selected):not(.status-indicator).disabled,
+.bento-flex-grid .wj-cell:not(.status-indicator).disabled,
+.bento-flex-grid.wj-content .wj-cell:not(.status-indicator).disabled,
+.bento-flex-grid .wj-alt:not(.status-indicator).disabled,
+.bento-flex-grid.wj-content .wj-alt:not(.status-indicator).disabled {
+  background: #e8eaec;
+  cursor: not-allowed;
+}
+.bento-flex-grid .wj-rowheaders .wj-header.wj-cell .disabled,
+.bento-flex-grid.wj-content .wj-rowheaders .wj-header.wj-cell .disabled {
+  cursor: not-allowed;
+  background: #e8eaec;
+}
+.bento-flex-grid .is-read-only.wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-multi-selected):not(.col-select),
+.bento-flex-grid.wj-content .is-read-only.wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-multi-selected):not(.col-select),
+.bento-flex-grid .is-read-only.wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-multi-selected):not(.col-select),
+.bento-flex-grid.wj-content .is-read-only.wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-multi-selected):not(.col-select) {
+  background: #e8eaec;
+}
+.bento-flex-grid .is-editable.wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-multi-selected):not(.col-select),
+.bento-flex-grid.wj-content .is-editable.wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-multi-selected):not(.col-select),
+.bento-flex-grid .is-editable.wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-multi-selected):not(.col-select),
+.bento-flex-grid.wj-content .is-editable.wj-cell:not(.wj-header):not(.wj-group):not(.wj-alt):not(.wj-state-multi-selected):not(.col-select) {
+  background: #fcf8d9;
+}
+.bento-flex-grid .wj-marquee,
+.bento-flex-grid.wj-content .wj-marquee {
+  border: none;
+  box-shadow: inset 0 0 0 1px #37383d;
+}
+.bento-flex-grid .wj-cell.wj-group [role="button"] + span:not([class*="bento-icon-"]),
+.bento-flex-grid.wj-content .wj-cell.wj-group [role="button"] + span:not([class*="bento-icon-"]) {
+  font-weight: bold;
+}
+.bento-flex-grid .wj-cell.wj-group .wj-elem-collapse,
+.bento-flex-grid.wj-content .wj-cell.wj-group .wj-elem-collapse,
+.bento-flex-grid .wj-cell.wj-group .collapse-icon,
+.bento-flex-grid.wj-content .wj-cell.wj-group .collapse-icon {
+  margin-left: 11px;
+  margin-right: 5px;
+  cursor: pointer;
+  padding-left: 1px;
+  opacity: 1;
+}
+.bento-flex-grid .wj-cell.wj-group .wj-elem-collapse:hover,
+.bento-flex-grid.wj-content .wj-cell.wj-group .wj-elem-collapse:hover,
+.bento-flex-grid .wj-cell.wj-group .collapse-icon:hover,
+.bento-flex-grid.wj-content .wj-cell.wj-group .collapse-icon:hover {
+  color: #93939c;
+}
+.bento-flex-grid .wj-colheaders .wj-header.wj-cell.col-select,
+.bento-flex-grid.wj-content .wj-colheaders .wj-header.wj-cell.col-select {
+  font-size: 1em;
+  padding: 10px 10px;
+}
+.bento-flex-grid .wj-colheaders .wj-header.wj-cell .col-select,
+.bento-flex-grid.wj-content .wj-colheaders .wj-header.wj-cell .col-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 1em;
+  padding: 11px 10px;
+  background: #f4f5f7;
+}
+.bento-flex-grid .wj-cell.col-select:not(.wj-group),
+.bento-flex-grid.wj-content .wj-cell.col-select:not(.wj-group) {
+  padding: 11px 10px !important;
+}
+.bento-flex-grid .wj-cell .cell-checkbox,
+.bento-flex-grid.wj-content .wj-cell .cell-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  color: #212121;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.bento-flex-grid .wj-cell .cell-checkbox:after,
+.bento-flex-grid.wj-content .wj-cell .cell-checkbox:after {
+  display: block;
+  margin-top: 11px;
+  font-family: 'bento-icomoon';
+  content: "\e636";
+}
+.bento-flex-grid .wj-colheaders .wj-header.wj-cell .cell-checkbox:after,
+.bento-flex-grid.wj-content .wj-colheaders .wj-header.wj-cell .cell-checkbox:after {
+  margin-top: 10px;
+}
+.bento-flex-grid .wj-cell .cell-checkbox.active,
+.bento-flex-grid.wj-content .wj-cell .cell-checkbox.active,
+.bento-flex-grid .wj-cell .cell-checkbox.selected,
+.bento-flex-grid.wj-content .wj-cell .cell-checkbox.selected {
+  background-color: #f4f5f7;
+}
+.bento-flex-grid .wj-cell .cell-checkbox.active:hover,
+.bento-flex-grid.wj-content .wj-cell .cell-checkbox.active:hover,
+.bento-flex-grid .wj-cell .cell-checkbox.selected:hover,
+.bento-flex-grid.wj-content .wj-cell .cell-checkbox.selected:hover {
+  background-color: #606169;
+}
+.bento-flex-grid .wj-cell .cell-checkbox.active:after,
+.bento-flex-grid.wj-content .wj-cell .cell-checkbox.active:after,
+.bento-flex-grid .wj-cell .cell-checkbox.selected:after,
+.bento-flex-grid.wj-content .wj-cell .cell-checkbox.selected:after {
+  content: "\e637";
+  color: #ffffff;
+}
+.bento-flex-grid .wj-cell .cell-checkbox.indeterminate:after,
+.bento-flex-grid.wj-content .wj-cell .cell-checkbox.indeterminate:after {
+  content: "\e651";
+}
+.bento-flex-grid.wj-flexgrid .wj-cell.wj-frozen-col,
+.bento-flex-grid.wj-content.wj-flexgrid .wj-cell.wj-frozen-col,
+.bento-flex-grid .wj-cell.wj-frozen.wj-frozen-col.wj-state-selected,
+.bento-flex-grid.wj-content .wj-cell.wj-frozen.wj-frozen-col.wj-state-selected,
+.bento-flex-grid .wj-cell.wj-header.wj-frozen-col,
+.bento-flex-grid.wj-content .wj-cell.wj-header.wj-frozen-col,
+.bento-flex-grid .wj-cell.wj-group.wj-frozen-col,
+.bento-flex-grid.wj-content .wj-cell.wj-group.wj-frozen-col,
+.bento-flex-grid .wj-frozen-col,
+.bento-flex-grid.wj-content .wj-frozen-col,
+.bento-flex-grid .wj-cell.border-right-thick,
+.bento-flex-grid.wj-content .wj-cell.border-right-thick {
+  border-right: 4px solid #d5d4d9;
+}
+.bento-flex-grid .wj-cell .clickable,
+.bento-flex-grid.wj-content .wj-cell .clickable {
+  color: #37383d;
+}
+.bento-flex-grid .wj-cell .btn.btn-xs,
+.bento-flex-grid.wj-content .wj-cell .btn.btn-xs {
+  padding: 0 10px;
+}
+.bento-flex-grid .wj-cell .btn.btn-xs:last-child,
+.bento-flex-grid.wj-content .wj-cell .btn.btn-xs:last-child {
+  margin-right: 0;
+}
+.bento-flex-grid .full-cell,
+.bento-flex-grid.wj-content .full-cell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 11px;
+}
+.bento-flex-grid .has-hover,
+.bento-flex-grid.wj-content .has-hover {
+  -webkit-transition: background-color 0.15s;
+  -o-transition: background-color 0.15s;
+  transition: background-color 0.15s;
+}
+.bento-flex-grid .has-hover:hover,
+.bento-flex-grid.wj-content .has-hover:hover {
+  background-color: #37383d;
+  color: #ffffff;
+}
+.bento-flex-grid .has-hover:hover .clickable,
+.bento-flex-grid.wj-content .has-hover:hover .clickable {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+.bento-flex-grid .hover,
+.bento-flex-grid.wj-content .hover {
+  background-color: #37383d;
+  color: #ffffff;
+}
+.bento-flex-grid .hover .clickable,
+.bento-flex-grid.wj-content .hover .clickable {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+.bento-flex-grid .group-icon,
+.bento-flex-grid.wj-content .group-icon,
+.bento-flex-grid .column-head-group-icon,
+.bento-flex-grid.wj-content .column-head-group-icon {
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 0;
+}
+.bento-flex-grid .group-icon,
+.bento-flex-grid.wj-content .group-icon {
+  margin-right: 25px;
+}
+.bento-flex-grid .tree,
+.bento-flex-grid.wj-content .tree {
+  margin-right: 15px;
+  font-size: 16px;
+}
+.bento-flex-grid .group-icon:before,
+.bento-flex-grid.wj-content .group-icon:before {
+  font-size: 20px;
+  line-height: 0;
+  top: 4px;
+  position: relative;
+}
+.bento-flex-grid .tree-indent,
+.bento-flex-grid.wj-content .tree-indent {
+  margin-left: 37px;
+}
+.bento-flex-grid .has-pointer,
+.bento-flex-grid.wj-content .has-pointer {
+  cursor: pointer;
+}
+.bento-flex-grid .column-head-group-icon:after,
+.bento-flex-grid.wj-content .column-head-group-icon:after {
+  content: '';
+  width: 10px;
+  height: 3px;
+  background-color: #212121;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.bento-flex-grid .wj-cell .selected i,
+.bento-flex-grid.wj-content .wj-cell .selected i {
+  color: #ff8000;
+}
+.bento-flex-grid .wj-glyph-filter:after,
+.bento-flex-grid.wj-content .wj-glyph-filter:after {
+  border: none;
+}
+.bento-flex-grid .wj-cell.wj-detail,
+.bento-flex-grid.wj-content .wj-cell.wj-detail {
+  border-left: 4px solid #ff8000;
+}
+.bento-flex-grid .wj-cell.wj-detail > div,
+.bento-flex-grid.wj-content .wj-cell.wj-detail > div {
+  height: auto !important;
+  border-top: 1px solid #d5d4d9;
+  border-right: 1px solid #d5d4d9;
+}
+.bento-flex-grid .wj-cell.wj-detail .table-cell.width-full,
+.bento-flex-grid.wj-content .wj-cell.wj-detail .table-cell.width-full {
+  background-color: #f4f5f7;
+}
+.bento-flex-grid .detail-parent-indicator,
+.bento-flex-grid.wj-content .detail-parent-indicator {
+  background-color: #ff8000;
+  border-right: 1px solid #d5d4d9;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 5px;
+}
+.bento-flex-grid .wj-cell .active,
+.bento-flex-grid.wj-content .wj-cell .active {
+  color: #ff8000;
+}
+.bento-flex-grid .actions-icon:hover i,
+.bento-flex-grid.wj-content .actions-icon:hover i {
+  color: #93939c;
+}
+.bento-flex-grid .actions-icon i,
+.bento-flex-grid.wj-content .actions-icon i {
+  margin-right: 10px;
+}
+.bento-flex-grid .grid-action-icon,
+.bento-flex-grid.wj-content .grid-action-icon {
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.bento-flex-grid .grid-action-icon.bento-icon-edit,
+.bento-flex-grid.wj-content .grid-action-icon.bento-icon-edit {
+  margin-right: 8px;
+}
+.bento-flex-grid .grid-action-icon:hover,
+.bento-flex-grid.wj-content .grid-action-icon:hover {
+  color: #93939c;
+}
+.bento-flex-grid .grid-action-icon:hover i,
+.bento-flex-grid.wj-content .grid-action-icon:hover i {
+  color: #93939c;
+}
+.wj-header[class*="wj-filter"] .wj-glyph-up:only-child,
+.wj-header[class*="wj-filter"] .wj-glyph-down:only-child {
+  display: inline-block;
+}
+.multi-select.wj-sort-asc:after,
+.wj-glyph-up:after {
+  content: '\e647';
+}
+.multi-select.wj-sort-desc:after,
+.wj-glyph-down:after {
+  content: '\e638';
+}
+.wj-flexgrid .wj-marker {
+  background-color: #ff8000;
+}
+.grid-dropdown li {
+  padding: 5px 10px;
+}
+.grid-dropdown.dropdown {
+  display: inline-block;
+}
+[wj-part="cells"] .wj-cell > div {
+  height: 100%;
+}
+[wj-part="cells"] .wj-cell .bento-select {
+  height: 100%;
+}
+[wj-part="cells"] .wj-cell .bento-select select {
+  height: 100%;
+  border: none;
+}
+[wj-part="cells"] .wj-cell .bento-select .btn {
+  height: 100%;
+  padding: 12px 10px;
+}
+[wj-part="cells"] .wj-cell .bento-number-input-wrapper,
+[wj-part="cells"] .wj-cell .bento-number-input-wrapper.six-digit {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+[wj-part="cells"] .wj-cell .bento-number-input-wrapper [bento-number-input],
+[wj-part="cells"] .wj-cell .bento-number-input-wrapper.six-digit [bento-number-input] {
+  border: none;
+  height: 100%;
+}
+[wj-part="cells"] .wj-cell .bento-number-input-wrapper .bento-number-input-button,
+[wj-part="cells"] .wj-cell .bento-number-input-wrapper.six-digit .bento-number-input-button {
+  border-top: none;
+  border-bottom: none;
+  height: 100%;
+}
+[wj-part="cells"] .wj-cell .bento-number-input-wrapper .bento-number-input-button.bento-number-input-button-down,
+[wj-part="cells"] .wj-cell .bento-number-input-wrapper.six-digit .bento-number-input-button.bento-number-input-button-down {
+  border-top: none;
+}
+[wj-part="cells"] .wj-cell .form-group.bento-datepicker,
+[wj-part="cells"] .wj-cell .input-group.bento-datepicker {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: none;
+}
+[wj-part="cells"] .wj-cell .form-group.bento-datepicker input,
+[wj-part="cells"] .wj-cell .input-group.bento-datepicker input {
+  width: calc(100% - 44px);
+}
+[wj-part="cells"] .wj-cell .form-group.bento-datepicker > .input-group-btn,
+[wj-part="cells"] .wj-cell .input-group.bento-datepicker > .input-group-btn {
+  float: right;
+  z-index: 3;
+  height: 100% !important;
+  width: auto;
+}
+[wj-part="cells"] .wj-cell .form-group.bento-datepicker > .input-group-btn > .btn,
+[wj-part="cells"] .wj-cell .input-group.bento-datepicker > .input-group-btn > .btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+[wj-part="cells"] .wj-cell .form-group.bento-datepicker > .input-group-btn > .btn i,
+[wj-part="cells"] .wj-cell .input-group.bento-datepicker > .input-group-btn > .btn i {
+  top: 0;
+}
+[wj-part="cells"] .wj-cell .form-group.bento-datepicker > .form-control,
+[wj-part="cells"] .wj-cell .input-group.bento-datepicker > .form-control {
+  height: 100%;
+}
+.bento-flex-grid .bento-flex-grid-checkbox {
+  border: 1px solid #37383d;
+  background: #ffffff;
+  height: 16px;
+  width: 16px;
+  font-size: 0.85em;
+  line-height: 14px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.bento-flex-grid .bento-flex-grid-checkbox:not([class*="bento-icon-"]) {
+  border: 1px solid #93939c;
+}
+.bento-flex-grid .bento-flex-grid-checkbox:not([class*="bento-icon-"]):before {
+  content: "\0010";
+  opacity: 0;
+}
+.bento-flex-grid .bento-flex-grid-checkbox:hover {
+  border: 1px solid #37383d;
+}
+.bento-flex-grid .bento-flex-grid-checkbox.disabled,
+.bento-flex-grid .bento-flex-grid-checkbox[disabled] {
+  cursor: not-allowed;
+  border: 1px solid #d5d4d9;
+  background: #f4f5f7;
+}
+[filter-row-footer],
+[grid-footer-for] {
+  position: relative;
+  border-top: 4px solid #d5d4d9;
+}
+[filter-row-footer] div[wj-part="ch"],
+[grid-footer-for] div[wj-part="ch"],
+[filter-row-footer] .wj-topleft .wj-header.wj-cell,
+[grid-footer-for] .wj-topleft .wj-header.wj-cell,
+[filter-row-footer] .wj-colheaders .wj-header.wj-cell,
+[grid-footer-for] .wj-colheaders .wj-header.wj-cell {
+  border-bottom: none;
+}
+[filter-row-footer].fixed,
+[grid-footer-for].fixed {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.bento-flex-grid .navbar-nav > li > a {
+  text-decoration: none !important;
+}
+.ios .btn-column-group,
+.android .btn-column-group {
+  display: none;
+}
+.bento-grid-header {
+  font-size: 24px;
+  font-family: "KnowledgeRegular";
+}
+.bento-flex-grid .wj-cell.wj-state-invalid {
+  border: 1px solid #dc0a0a;
+}
+.bento-flex-grid .wj-cell.wj-state-invalid:after {
+  content: none;
+}
+.bento-flex-grid .wj-cell.wj-state-invalid > input {
+  color: black;
+}
+.bento-flex-grid .wj-cell.wj-header.wj-state-invalid {
+  border: 1px solid #dc0a0a !important;
+}
+/* Tooltip content */
+.wj-tooltip {
+  background-color: black;
+  border-radius: 0;
+  font-size: 13px;
+  color: #eee;
+  padding: 10px;
+}
+/* Tooltip pointer */
+.wj-tooltip:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  right: calc(50% - 6px);
+  bottom: -12px;
+  border: 6px solid rgba(0, 0, 0, 0);
+  border-top: 6px solid #000;
+}
+/* IF ADDED TO DESIGN: Tooltip icon to left of text - some of the below is junk; adjust details as-needed */
+.wj-tooltip:before {
+  position: relative;
+  font-family: 'bento-icomoon';
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  speak: none;
+  line-height: 0;
+  top: 2px;
+  font-size: 17px;
+  height: 14px;
+  width: 1.3em;
+  content: "\e6f3";
+  border: none;
+  display: inline-block;
+}
+.wj-tooltip.wj-tooltip-down:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  right: calc(50% - 6px);
+  top: -12px;
+  bottom: auto;
+  border: 6px solid rgba(0, 0, 0, 0);
+  border-bottom: 6px solid #000;
+}
+.force-desktop .bento-flex-grid .wj-grouppanel,
+.force-desktop.wj-grouppanel,
+.force-desktop .wj-grouppanel {
+  line-height: 50px;
+}
+.force-desktop .bento-flex-grid .wj-grouppanel .wj-header.wj-cell.wj-groupmarker,
+.force-desktop.wj-grouppanel .wj-header.wj-cell.wj-groupmarker,
+.force-desktop .wj-grouppanel .wj-header.wj-cell.wj-groupmarker {
+  margin-top: 10px;
+  font-size: 11px;
+  line-height: 28px;
+  padding: 0 30px 0 10px;
+}
+.force-desktop .bento-flex-grid .wj-grouppanel .wj-header.wj-cell.wj-groupmarker [wj-remove],
+.force-desktop.wj-grouppanel .wj-header.wj-cell.wj-groupmarker [wj-remove],
+.force-desktop .wj-grouppanel .wj-header.wj-cell.wj-groupmarker [wj-remove] {
+  line-height: 28px;
+}
+.force-desktop.bento-flex-grid .bento-flex-grid-checkbox,
+.force-desktop .bento-flex-grid .bento-flex-grid-checkbox {
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.force-desktop.bento-flex-grid .wj-colheaders .wj-cell.wj-header .col-select,
+.force-desktop .bento-flex-grid .wj-colheaders .wj-cell.wj-header .col-select {
+  padding: 7px;
+}
+.force-desktop.bento-flex-grid .wj-rowheaders .wj-header.wj-cell .disabled,
+.force-desktop .bento-flex-grid .wj-rowheaders .wj-header.wj-cell .disabled {
+  padding: 4px;
+}
+.force-desktop.bento-flex-grid [wj-part="cells"] .wj-cell .bento-select .btn,
+.force-desktop .bento-flex-grid [wj-part="cells"] .wj-cell .bento-select .btn {
+  padding: 3px;
+}
+.force-desktop.bento-flex-grid .wj-cell.col-select:not(.wj-group),
+.force-desktop .bento-flex-grid .wj-cell.col-select:not(.wj-group) {
+  padding: 4px 10px !important;
+}
+.force-desktop.bento-flex-grid .wj-cell.col-select.col-header-select:not(.wj-group),
+.force-desktop .bento-flex-grid .wj-cell.col-select.col-header-select:not(.wj-group) {
+  padding: 7px 10px !important;
+}
+.force-desktop.bento-flex-grid .wj-header.wj-cell,
+.force-desktop .bento-flex-grid .wj-header.wj-cell {
+  font-size: 0.85em;
+  padding: 5px;
+  line-height: 16px;
+}
+.force-desktop.bento-flex-grid .wj-header.wj-cell input,
+.force-desktop .bento-flex-grid .wj-header.wj-cell input {
+  margin: 0;
+  height: 30px !important;
+  line-height: 30px !important;
+}
+.force-desktop.bento-flex-grid .wj-header.wj-cell input[type=radio],
+.force-desktop .bento-flex-grid .wj-header.wj-cell input[type=radio],
+.force-desktop.bento-flex-grid .wj-header.wj-cell input[type=checkbox],
+.force-desktop .bento-flex-grid .wj-header.wj-cell input[type=checkbox] {
+  margin-top: 0;
+}
+.force-desktop.bento-flex-grid .wj-header.wj-cell .wj-dropdown,
+.force-desktop .bento-flex-grid .wj-header.wj-cell .wj-dropdown {
+  height: 30px;
+}
+.force-desktop.bento-flex-grid .input-group.bento-datepicker > .input-group-btn > .btn,
+.force-desktop .bento-flex-grid .input-group.bento-datepicker > .input-group-btn > .btn {
+  font-size: 20px;
+}
+.force-desktop.bento-flex-grid .wj-colheaders .wj-header.wj-cell.col-select,
+.force-desktop .bento-flex-grid .wj-colheaders .wj-header.wj-cell.col-select {
+  padding: 7px 10px;
+  font-size: 1em;
+}
+.force-desktop.bento-flex-grid .wj-colheaders .wj-header.wj-cell .cell-checkbox:after,
+.force-desktop .bento-flex-grid .wj-colheaders .wj-header.wj-cell .cell-checkbox:after {
+  margin-top: 10px;
+}
+.force-desktop.bento-flex-grid .wj-cell .cell-checkbox:after,
+.force-desktop .bento-flex-grid .wj-cell .cell-checkbox:after {
+  margin-top: 8px;
+}
+.force-desktop.bento-flex-grid .wj-colheaders .wj-header.wj-cell:not(.col-header-group-level),
+.force-desktop .bento-flex-grid .wj-colheaders .wj-header.wj-cell:not(.col-header-group-level) {
+  padding: 9px 7px !important;
+}
+.force-desktop.bento-flex-grid .wj-header.wj-cell.bento-input-cell,
+.force-desktop .bento-flex-grid .wj-header.wj-cell.bento-input-cell {
+  padding: 2px;
+}
+.force-desktop.bento-flex-grid .wj-cell,
+.force-desktop .bento-flex-grid .wj-cell,
+.force-desktop.bento-flex-grid .table-cell,
+.force-desktop .bento-flex-grid .table-cell {
+  padding: 7px;
+  font-size: 13px;
+  line-height: 16px;
+}
+.force-desktop.bento-flex-grid .wj-cell .wj-elem-dropdown,
+.force-desktop .bento-flex-grid .wj-cell .wj-elem-dropdown,
+.force-desktop.bento-flex-grid .table-cell .wj-elem-dropdown,
+.force-desktop .bento-flex-grid .table-cell .wj-elem-dropdown {
+  padding-right: 5.5px;
+}
+.force-desktop.bento-flex-grid .wj-cell .full-cell,
+.force-desktop .bento-flex-grid .wj-cell .full-cell,
+.force-desktop.bento-flex-grid .table-cell .full-cell,
+.force-desktop .bento-flex-grid .table-cell .full-cell {
+  padding: 7px;
+}
+.force-desktop.bento-flex-grid .wj-cell input,
+.force-desktop .bento-flex-grid .wj-cell input,
+.force-desktop.bento-flex-grid .table-cell input,
+.force-desktop .bento-flex-grid .table-cell input {
+  margin: 0;
+}
+.force-desktop.bento-flex-grid .grid-dropdown.dropdown,
+.force-desktop .bento-flex-grid .grid-dropdown.dropdown {
+  top: -1px;
+}
+.force-desktop.bento-flex-grid .wj-cell.wj-detail,
+.force-desktop .bento-flex-grid .wj-cell.wj-detail {
+  padding: 0;
+}
+.force-desktop.bento-flex-grid .actions-icon i,
+.force-desktop .bento-flex-grid .actions-icon i {
+  font-size: 16px;
+  margin-right: 10px;
+}
+.force-desktop.bento-flex-grid .actions-icon .bento-icon-arrow-down2,
+.force-desktop .bento-flex-grid .actions-icon .bento-icon-arrow-down2 {
+  top: 0;
+}
+.force-desktop.bento-flex-grid .wj-grid-editor,
+.force-desktop .bento-flex-grid .wj-grid-editor {
+  padding: 5px;
+  padding-left: 18.75%;
+}
+.force-desktop.bento-flex-grid .wj-input-group-btn,
+.force-desktop .bento-flex-grid .wj-input-group-btn {
+  width: 32px;
+}
+.force-desktop.bento-flex-grid .wj-input-group-btn:last-child > .wj-btn,
+.force-desktop .bento-flex-grid .wj-input-group-btn:last-child > .wj-btn {
+  padding-top: 0;
+}
+.bento-flex-grid.bento-flex-grid-compact .wj-cell,
+.bento-flex-grid.bento-flex-grid-compact .table-cell,
+.bento-flex-grid.bento-flex-grid-compact .full-cell,
+.bento-flex-grid.bento-flex-grid-compact .cell-actions {
+  padding: 8px;
+}
+.bento-flex-grid.bento-flex-grid-compact .wj-cell .wj-elem-dropdown,
+.bento-flex-grid.bento-flex-grid-compact .table-cell .wj-elem-dropdown,
+.bento-flex-grid.bento-flex-grid-compact .full-cell .wj-elem-dropdown,
+.bento-flex-grid.bento-flex-grid-compact .cell-actions .wj-elem-dropdown {
+  padding-right: 8.5px;
+}
+.bento-flex-grid.bento-flex-grid-compact .wj-header.wj-cell {
+  padding: 10px 8px;
+}
+.bento-flex-grid.bento-flex-grid-compact .wj-cell.wj-group .wj-elem-collapse,
+.bento-flex-grid.bento-flex-grid-compact .wj-cell.wj-group .collapse-icon {
+  margin-left: 8px;
+}
+.bento-flex-grid.bento-flex-grid-compact .wj-colheaders .wj-header.wj-cell .col-select {
+  padding: 8px 10px;
+}
+.bento-flex-grid.bento-flex-grid-compact .wj-cell .cell-checkbox:after {
+  margin-top: 8px;
+}
+.bento-flex-grid.bento-flex-grid-compact .wj-input-group-btn {
+  width: 38px;
+}
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .wj-cell,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .wj-cell,
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .table-cell,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .table-cell,
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .full-cell,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .full-cell,
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .cell-actions,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .cell-actions {
+  padding: 3px;
+}
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .wj-cell .wj-elem-dropdown,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .wj-cell .wj-elem-dropdown,
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .table-cell .wj-elem-dropdown,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .table-cell .wj-elem-dropdown,
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .full-cell .wj-elem-dropdown,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .full-cell .wj-elem-dropdown,
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .cell-actions .wj-elem-dropdown,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .cell-actions .wj-elem-dropdown {
+  padding-right: 8.5px;
+}
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .wj-header.wj-cell,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .wj-header.wj-cell {
+  padding: 5px 3px;
+}
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .wj-cell.wj-group .wj-elem-collapse,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .wj-cell.wj-group .wj-elem-collapse,
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .wj-cell.wj-group .collapse-icon,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .wj-cell.wj-group .collapse-icon {
+  margin-left: 3px;
+}
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .wj-colheaders .wj-header.wj-cell .col-select,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .wj-colheaders .wj-header.wj-cell .col-select,
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .wj-colheaders .wj-header.wj-cell:not(.col-header-group-level),
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .wj-colheaders .wj-header.wj-cell:not(.col-header-group-level) {
+  padding: 5px 3px !important;
+}
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .wj-cell .cell-checkbox:after,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .wj-cell .cell-checkbox:after {
+  margin-top: 3px;
+}
+.force-desktop .bento-flex-grid.bento-flex-grid-compact .wj-input-group-btn,
+.force-desktop.bento-flex-grid.bento-flex-grid-compact .wj-input-group-btn {
+  width: 24px;
+}
+/**
+ * Grid Toolbar CSS properties
+ */
+.open > .bento-flexgrid-colvis {
+  display: block;
+}
+.open > .bento-flexgrid-colvis .bento-checkbox {
+  margin-right: 8px;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header {
+  margin: 0;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section {
+  margin: 0 10px 10px;
+  padding: 0 10px;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section label {
+  margin-bottom: 0;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section > label {
+  font-weight: bold;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section.bento-flexgrid-colvis-density > * {
+  display: inline-block;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section.bento-flexgrid-colvis-density > label {
+  font-weight: bold;
+  margin-right: 7px;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section.bento-flexgrid-colvis-density > div {
+  white-space: nowrap;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section.bento-flexgrid-colvis-density > div label {
+  margin-right: 15px;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section.bento-flexgrid-colvis-density > div label input {
+  margin: 0 5px 1px 0;
+  vertical-align: middle;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section.bento-flexgrid-colvis-selector {
+  border-top: 1px solid #b2b2b8;
+  padding-top: 10px;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section.bento-flexgrid-colvis-selector > label {
+  white-space: nowrap;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section.bento-flexgrid-colvis-selector a {
+  cursor: pointer;
+  color: #212121;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section.bento-flexgrid-colvis-selector a:hover {
+  text-decoration: underline;
+  color: #37383d;
+  background: none;
+}
+.open > .bento-flexgrid-colvis .bento-flexgrid-colvis-header section.bento-flexgrid-colvis-selector a:focus {
+  background: none;
+  text-decoration: underline;
+  outline: none;
+}
+.open > .bento-flexgrid-colvis ul {
+  display: block;
+  padding: 0;
+}
+.open > .bento-flexgrid-colvis ul li {
+  list-style: none;
+}
+.open > .bento-flexgrid-colvis ul li:hover {
+  cursor: default;
+}
+.open > .bento-flexgrid-colvis ul li > label {
+  line-height: 30px;
+  padding: 0 20px;
+  display: block;
+  white-space: nowrap;
+  margin: 0;
+}
+.open > .bento-flexgrid-colvis ul li > label.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.open > .bento-flexgrid-colvis ul li.column label:hover:not(.disabled) {
+  text-decoration: underline;
+}
+.dropdown-menu.megamenu.bento-flexgrid-colvis ul > li.column {
+  padding: 0 !important;
+}
+.dropdown-menu.megamenu.bento-flexgrid-colvis ul > li.column:first-child {
+  padding: 0 !important;
+}
+.wj-listbox-item {
+  padding: 5px 10px;
+}
+.wj-listbox-item input[type=checkbox] {
+  margin: 4px 6px 0 0;
+  vertical-align: baseline;
+}
+.wj-content.wj-dropdown {
+  border-radius: 0;
+  height: 100%;
+  width: 100%;
+}
+.wj-content {
+  border-color: #93939c;
+  opacity: 1;
+}
+.wj-content:focus {
+  border-color: #93939c;
+}
+.wj-input-group-btn:last-child > .wj-btn {
+  border: none;
+  background: none;
+}
+.wj-btn-default:hover {
+  background-color: #ffffff;
+}
+.wj-cell .wj-multiselect {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+}
+.wj-cell .wj-multiselect .wj-template {
+  position: absolute !important;
+  width: 100%;
+}
+.wj-listbox-item:not(.wj-state-selected):not(.wj-state-disabled):not(.wj-separator):hover {
+  background-color: #d4ebf4;
+}
+.wj-btn .wj-glyph-down:after {
+  content: '\e630';
+  font-size: 21px;
+}
+.wj-control.wj-dropdown .wj-input-group .wj-input-group-btn:last-child:not(:first-child) > .wj-btn {
+  border-left: none;
+}
+.wj-control.wj-dropdown .wj-input-group .wj-input-group-btn:last-child:not(:first-child) > .wj-btn:focus,
+.wj-control.wj-dropdown .wj-input-group .wj-input-group-btn:last-child:not(:first-child) > .wj-btn:hover {
+  background: transparent;
+}
+.wj-control.wj-dropdown .wj-input-group .wj-input-group-btn:last-child:not(:first-child) > .wj-btn .wj-glyph-down {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+.force-desktop .wj-multiselect .wj-btn .wj-glyph-down {
+  vertical-align: text-bottom;
+}
+.bento-flex-grid .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected).status-indicator,
+.bento-flex-grid .wj-cell:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(.wj-state-multi-selected).status-indicator {
+  background-color: #ffffff;
+}
+.bento-flex-grid .status-indicator:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  border-radius: 12px;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  left: 10px;
+  bottom: auto;
+  right: auto;
+  transform: translate3d(0, -50%, 0);
+}
+.bento-flex-grid.wj-content .wj-cell.status-indicator {
+  padding-left: 30px !important;
+  padding-right: 20px !important;
+}
+.bento-flex-grid.wj-content .wj-cell.status-indicator .wj-grid-editor {
+  padding-left: 0;
+}
+.bento-flex-grid.wj-content .wj-cell.status-indicator .wj-btn.wj-btn-glyph.wj-right.wj-elem-dropdown {
+  cursor: pointer;
+  font-weight: normal;
+  height: 100%;
+  left: 0;
+  padding-right: 3px;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.bento-flex-grid.wj-content .wj-cell.status-indicator .wj-btn.wj-btn-glyph.wj-right.wj-elem-dropdown .wj-glyph-down {
+  top: 0;
+}
+.bento-flex-grid .status-indicator.in-progress:before {
+  background-color: #0072a8;
+}
+.bento-flex-grid .status-indicator.warning:before {
+  background-color: #ffb400;
+}
+.bento-flex-grid .status-indicator.success:before {
+  background-color: #387c2b;
+}
+.bento-flex-grid .status-indicator.error:before {
+  background-color: #dc0a0a;
+}
+.bento-flex-grid .status-indicator.disabled:before {
+  border: 1px solid #93939c;
+  background-color: #e8eaec;
+}
+.status-indicator .wj-listbox .wj-listbox-item {
+  padding: 5px 10px 5px 30px;
+  position: relative;
+}
+.status-indicator .wj-listbox .wj-listbox-item:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  border-radius: 12px;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  left: 10px;
+  bottom: auto;
+  right: auto;
+  transform: translateY(-50%);
+}
+.status-indicator .wj-listbox .wj-listbox-item:nth-child(1):before {
+  background-color: #0072a8;
+}
+.status-indicator .wj-listbox .wj-listbox-item:nth-child(2):before {
+  background-color: #ffb400;
+}
+.status-indicator .wj-listbox .wj-listbox-item:nth-child(3):before {
+  background-color: #387c2b;
+}
+.status-indicator .wj-listbox .wj-listbox-item:nth-child(4):before {
+  background-color: #dc0a0a;
+}
+.status-indicator .wj-listbox .wj-listbox-item:nth-child(5):before {
+  border: 1px solid #93939c;
+  background-color: #e8eaec;
+}
+.bento-flex-grid.has-row-hover .wj-row:hover .wj-cell:not(.wj-header) {
+  background-color: #d4ebf4 !important;
+}

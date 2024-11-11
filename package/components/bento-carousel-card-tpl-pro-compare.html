@@ -1,0 +1,13 @@
+<div class="left-col">
+  <i class="icon-a"></i>
+  <i class="icon-b"></i>
+</div>
+<div class="right-col">
+  <div class="periods">
+    <h3 ng-bind="cardData.title_a"></h3>
+    <h3 ng-bind="cardData.title_b"></h3>
+  </div>
+  <ul>
+    <li ng-repeat="item in cardData.tasks | limitTo: 4" ng-bind="item.title"></li>
+  </ul>
+</div>
