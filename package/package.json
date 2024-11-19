@@ -1,6 +1,6 @@
 {
   "name": "bento-modern",
-  "version": "4.1.3",
+  "version": "4.1.6",
   "description": "Bento Modern AngularJS UI Components for Thomson Reuters",
   "main": "components/bento-modern.js",
   "homepage": "http://bento.ui.int.thomsonreuters.com/",

@@ -1,6 +1,6 @@
 /**
- * Bento v4.1.3
- * Built on: 2024-10-17T19:45:42
+ * Bento v4.1.6
+ * Built on: 2024-11-14T22:18:44
  * Copyright 2024 Thomson Reuters
  * Maintained by Chi Gao, Joe Huang, Aaron Mendez
  */
@@ -70,7 +70,7 @@ window.bento = angular
 angular.module('bento.modern', ['bento.ui']);
 
 bento.version = {
-  release: '4.1.3',
+  release: '4.1.6',
   codeName: 'shuumaku'
 };
 })(window.angular);
@@ -220,7 +220,7 @@ angular.module("../templates/combobox/bento-combobox-header-template.html", []).
 
 angular.module("../templates/combobox/bento-combobox.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("../templates/combobox/bento-combobox.html",
-    "<div class=\"bento-combobox bento-select form-control\"\n" +
+    "<div class=\"bento-combobox bento-select form-control\" aria-expanded=\"{{isContainerVisible}}\"\n" +
     "     ng-class=\"{'open': isContainerVisible, 'no-value': !inputValue}\"\n" +
     "     tabindex = '-1'\n" +
     "     role=\"combobox\"\n" +
@@ -426,7 +426,7 @@ angular.module("../templates/multiselect_list/bento-multiselect-list.html", []).
     "           class=\"form-control\"\n" +
     "           ng-model=\"searchTerm\"\n" +
     "           ng-change=\"onSearchChange()\"\n" +
-    "           aria-label=\"{{'BENTO_UI_MULTISELECT_OVERLAY_SEARCH_LABEL' | bentoTranslate}}\"\n" +
+    "           aria-label=\"{{'BENTO_UI_MULTISELECT_OVERLAY_SEARCH_LABEL' | bentoTranslate}} {{filteredItems.length}} Items\"\n" +
     "    />\n" +
     "  </div>\n" +
     "  <div class=\"bento-multiselect-list-scroll-pane\"\n" +
@@ -1583,9 +1583,9 @@ angular.module("../templates/tree/bento-tree.html", []).run(["$templateCache", f
 angular.module("uib/template/accordion/accordion-group.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("uib/template/accordion/accordion-group.html",
     "<div role=\"tab\" id=\"{{::headingId}}\" aria-selected=\"{{isOpen}}\" class=\"panel-heading\" ng-class=\"{open: isOpen}\" ng-keypress=\"toggleOpen($event)\">\n" +
-    "  <h4 class=\"panel-title\">\n" +
+    "  <h3 class=\"panel-title\">\n" +
     "    <a role=\"button\" data-toggle=\"collapse\" href aria-expanded=\"{{isOpen}}\" aria-controls=\"{{::panelId}}\" tabindex=\"0\" class=\"accordion-toggle\" ng-click=\"toggleOpen()\" uib-accordion-transclude=\"heading\" ng-disabled=\"isDisabled\" uib-tabindex-toggle><i ng-class=\"isOpen === true ? 'bento-icon-minus-plain' : 'bento-icon-plus-plain'\" ></i><span uib-accordion-header ng-class=\"{'text-muted': isDisabled}\">{{heading}}</span></a>\n" +
-    "  </h4>\n" +
+    "  </h3>\n" +
     "</div>\n" +
     "<div id=\"{{::panelId}}\" aria-labelledby=\"{{::headingId}}\" aria-hidden=\"{{!isOpen}}\" role=\"tabpanel\" class=\"panel-collapse collapse\" uib-collapse=\"!isOpen\">\n" +
     "  <div class=\"panel-body\" ng-transclude></div>\n" +
@@ -7623,8 +7623,6 @@ angular
              */
             scope.onSelectAllClick = function(e) {
               if (e.screenX !== 0 || e.screenY !== 0) {
-                // Focus back onto the input field when it's a mouse click
-                input.focus();
                 input.setSelectionRange(0, input.value.length);
               }
 
@@ -7647,8 +7645,6 @@ angular
              */
             scope.onItemClick = function(item, e) {
               if (e.screenX !== 0 || e.screenY !== 0) {
-                // Focus back onto the input field when it's a mouse click
-                input.focus();
                 input.setSelectionRange(0, input.value.length);
               }
 
@@ -8862,6 +8858,13 @@ function getItemChecked(obj, checkedUid) {
             alignClearButton(inputElement, clearButton);
           }
 
+          inputElement.on('keydown', function (event) {
+            if (event.key === 'Tab') {
+              event.preventDefault();
+              clearButton.focus();
+            }
+          });
+
           // Private event handler
           // Check clear button location when window is resizing
           function windowResizeEventHandler(event) {
@@ -8908,7 +8911,7 @@ function getItemChecked(obj, checkedUid) {
             var override = (attrs.closeButtonIconClass) ? attrs.closeButtonIconClass : 'bento-icon-close-x',
               clearButton = angular.element('<div class="bento-reset-close-button hide '+
               override+
-              '" tabindex="-1"></div>');
+              '" tabindex="0"></div>');
 
             var getter = $parse(attrs.ngModel);
 
@@ -8924,6 +8927,22 @@ function getItemChecked(obj, checkedUid) {
               }
             }, true);
 
+            element.on('blur', function (event) {
+              $timeout(function () {
+                  if (document.activeElement !== clearButton[0]) {
+                      clearButton.addClass('hide');
+                  }
+              }, 10);
+            });
+
+            clearButton.on('focusout', function (event) {
+              $timeout(function () {
+                  if (document.activeElement !== clearButton[0] && document.activeElement !== element[0]) {
+                      clearButton.addClass('hide');
+                  }
+              }, 10);
+            });
+
             if (typeof attrs.bentoResetAlwaysOn === 'undefined') {
 
               // Listen to input field `change` and `focus` and show / hide clear button
@@ -8931,17 +8950,6 @@ function getItemChecked(obj, checkedUid) {
                 $bentoResetFactory.showAndHideButton(element, clearButton, getter(scope));
               });
 
-              // Listen to input field blur
-              // update: `event.relatedTarget` is not available on `blur` use `focusout` instead with IE9
-              element.on('focusout', function (event) {
-                if (event.relatedTarget !== clearButton[0]) {
-                  // We need to use timeout to make sure clearBottom is clicked
-                  // even `event.relatedTarget` is NULL <-- FF security
-                  $timeout(function () {
-                    clearButton.addClass('hide');
-                  }, 10);
-                }
-              });
             }
 
             window.addEventListener('scroll',onWindowScroll, true);
@@ -10285,7 +10293,7 @@ bentSplitterGroupApp
 
                 // Main SR object
                 var srObj = angular.element(
-                    '<info class="sr-only" tabindex="0">{{ "BENTO_UI_SPLITTER_GROUP" | bentoTranslate}}</info>');
+                    '<info class="sr-only" tabindex="-1">{{ "BENTO_UI_SPLITTER_GROUP" | bentoTranslate}}</info>');
                 $compile(srObj)($scope);
                 $element.prepend(srObj);
 

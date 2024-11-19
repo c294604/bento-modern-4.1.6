@@ -143,7 +143,7 @@ angular.module("../templates/combobox/bento-combobox-header-template.html", []).
 
 angular.module("../templates/combobox/bento-combobox.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("../templates/combobox/bento-combobox.html",
-    "<div class=\"bento-combobox bento-select form-control\"\n" +
+    "<div class=\"bento-combobox bento-select form-control\" aria-expanded=\"{{isContainerVisible}}\"\n" +
     "     ng-class=\"{'open': isContainerVisible, 'no-value': !inputValue}\"\n" +
     "     tabindex = '-1'\n" +
     "     role=\"combobox\"\n" +
@@ -349,7 +349,7 @@ angular.module("../templates/multiselect_list/bento-multiselect-list.html", []).
     "           class=\"form-control\"\n" +
     "           ng-model=\"searchTerm\"\n" +
     "           ng-change=\"onSearchChange()\"\n" +
-    "           aria-label=\"{{'BENTO_UI_MULTISELECT_OVERLAY_SEARCH_LABEL' | bentoTranslate}}\"\n" +
+    "           aria-label=\"{{'BENTO_UI_MULTISELECT_OVERLAY_SEARCH_LABEL' | bentoTranslate}} {{filteredItems.length}} Items\"\n" +
     "    />\n" +
     "  </div>\n" +
     "  <div class=\"bento-multiselect-list-scroll-pane\"\n" +
@@ -1506,9 +1506,9 @@ angular.module("../templates/tree/bento-tree.html", []).run(["$templateCache", f
 angular.module("uib/template/accordion/accordion-group.html", []).run(["$templateCache", function ($templateCache) {
   $templateCache.put("uib/template/accordion/accordion-group.html",
     "<div role=\"tab\" id=\"{{::headingId}}\" aria-selected=\"{{isOpen}}\" class=\"panel-heading\" ng-class=\"{open: isOpen}\" ng-keypress=\"toggleOpen($event)\">\n" +
-    "  <h4 class=\"panel-title\">\n" +
+    "  <h3 class=\"panel-title\">\n" +
     "    <a role=\"button\" data-toggle=\"collapse\" href aria-expanded=\"{{isOpen}}\" aria-controls=\"{{::panelId}}\" tabindex=\"0\" class=\"accordion-toggle\" ng-click=\"toggleOpen()\" uib-accordion-transclude=\"heading\" ng-disabled=\"isDisabled\" uib-tabindex-toggle><i ng-class=\"isOpen === true ? 'bento-icon-minus-plain' : 'bento-icon-plus-plain'\" ></i><span uib-accordion-header ng-class=\"{'text-muted': isDisabled}\">{{heading}}</span></a>\n" +
-    "  </h4>\n" +
+    "  </h3>\n" +
     "</div>\n" +
     "<div id=\"{{::panelId}}\" aria-labelledby=\"{{::headingId}}\" aria-hidden=\"{{!isOpen}}\" role=\"tabpanel\" class=\"panel-collapse collapse\" uib-collapse=\"!isOpen\">\n" +
     "  <div class=\"panel-body\" ng-transclude></div>\n" +
